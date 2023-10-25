@@ -1,0 +1,22 @@
+Proceso sin_titulo
+	definir num, i , mod_ como entero;
+	definir condicion como logico;
+	condicion <- Verdadero;
+	mientras condicion = verdadero Hacer
+		Escribir 'ingrese el numero; ';
+		Leer num;
+		
+		si num <0 Entonces
+			Para i<-1 Hasta num *(-1) Con Paso 1 Hacer
+				Escribir i, 'incremento';
+			FinPara
+				Leer mod_;
+				
+				si mod_ = 2 Entonces
+					condicion<- Falso;				
+				FinSi
+			SiNo
+				Escribir 'ingrese un numero';
+		FinSi
+	FinMientras
+FinProceso

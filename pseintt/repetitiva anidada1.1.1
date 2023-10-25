@@ -1,0 +1,97 @@
+Proceso sin_titulo
+	Definir a,a1,grado,num, intentos,contador Como Entero;
+	Escribir 'que grado de dificultad quiere';
+	Escribir 'facil(1), medio (2), dificil (3) ,personalizado (4)';
+	Leer grado;
+	Segun grado Hacer
+		1:
+			Escribir 'adivine cual es el numro del 1 a 10 ';
+			a<-Aleatorio(1,10);
+			contador<-0;
+			Repetir
+				contador<-contador+1;
+				Escribir 'adivina el numero';
+				Escribir 'intento', contador,'/3';
+				Leer a1;
+			si a1>a Entonces
+				Escribir 'te pasaste';
+			SiNo
+				si a1<a Entonces
+					Escribir 'te faltan';
+				FinSi
+				si a1==a Entonces
+					Escribir 'le atinaste';
+				FinSi
+			FinSi
+		Hasta Que contador=3 o a1==a;
+		Escribir 'el numro era :',a;
+	    2:
+            Escribir 'adivine cual es el numro del 1 a 100 ';
+			a<-Aleatorio(1,100);
+			contador<-0;
+			Repetir
+				contador<-contador+1;
+				Escribir 'adivina el numero';
+				Escribir 'intento', contador,'/7';
+				Leer a1;
+				si a1>a Entonces
+					Escribir 'te pasaste';
+				SiNo
+					si a1<a Entonces
+						Escribir 'te faltan';
+					FinSi
+					si a1==a Entonces
+						Escribir 'le atinaste';
+					FinSi
+				FinSi
+			Hasta Que contador=7 o a1==a;
+			Escribir 'el numero era :',a;
+		3:
+			Escribir 'adivine cual es el numro del 1 a 1000 ';
+			a<-Aleatorio(1,1000);
+			contador<-0;
+			Repetir
+				contador<-contador+1;
+				Escribir 'adivina el numero';
+				Escribir 'intento', contador,'/15';
+				Leer a1;
+				si a1>a Entonces
+					Escribir 'te pasaste';
+				SiNo
+					si a1<a Entonces
+						Escribir 'te faltan';
+					FinSi
+					si a1==a Entonces
+						Escribir 'le atinaste';
+					FinSi
+				FinSi
+			Hasta Que contador=15 o a1==a;
+			Escribir 'el numero era :',a;
+		4:
+			Escribir 'adivine cual es el numro del 1 a ...';
+			Leer num;
+			Escribir 'con___intentos';
+			Leer intentos;
+			
+			a<-Aleatorio(1,num);
+			contador<-0;
+			Repetir
+				contador<-contador+1;
+				Escribir 'adivina el numero';
+				Escribir 'intento', contador,'/',intentos;
+				Leer a1;
+				si a1>a Entonces
+					Escribir 'te pasaste';
+				SiNo
+					si a1<a Entonces
+						Escribir 'te faltan';
+					FinSi
+					si a1==a Entonces
+						Escribir 'le atinaste';
+					FinSi
+				FinSi
+			Hasta Que contador=intentos o a1==a;
+			Escribir 'el numero era :',a;
+
+	FinSegun
+FinProceso

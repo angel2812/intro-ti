@@ -1,0 +1,30 @@
+Proceso sin_titulo
+	Definir c,c1,c2,c3, cont como real;
+	Escribir 'cuantas materias tienes';
+	Leer c;
+	c1<-0;
+	c2<-0;
+	c3<-0;
+	cont<-1;
+	Mientras c3<=6 Hacer
+		Repetir
+			escribir 'ingrese clasificacion de la materia ', cont,':';
+			Leer c1;
+			c2<-c2+c1;
+			cont<-cont+1;
+		Hasta Que cont>c
+		c3<-c2/c;
+		Escribir '';
+		si c3>6 Entonces
+			Escribir 'aprobaste con: ',c3;
+		SiNo
+			Escribir 'no aprobaste';
+			Escribir 'volveras a repetir';
+			Escribir '________________________';
+			c1<-0;
+			c2<-0;
+			c3<-0;
+			cont<-1;
+		FinSi
+	FinMientras
+FinProceso

@@ -1,0 +1,50 @@
+Proceso sin_titulo
+	Definir cant, precio, combo Como Entero;
+	Definir desc, tp, tpb Como Real;
+	Definir resp, resp1 Como Cadena;
+	resp <- 'si';
+	Mientras (resp=='si') Hacer
+		tp <- 0;
+		resp1 <- 'si';
+		Mientras (resp1=='si') Hacer
+			cant <- 0;
+			precio <- 0;
+			combo <- 0;
+			desc <- 0;
+			tpb <- 0;
+			Escribir '';
+			Escribir 'elija su combo';
+			Escribir 'burguer king';
+			Escribir '(1) combo chico';
+			Escribir '(2) combo mediano';
+			Escribir '(3) combo grande';
+			Leer combo;
+			Si combo>0 Y combo<=3 Entonces
+				Escribir 'cantidad';
+				Leer cant;
+				Segun combo Hacer
+					1:
+						tpb <- cant*75;
+					2:
+						tpb <- cant*95;
+					3:
+						tpb <- cant*135;
+				FinSegun
+				Si cant>5 Entonces
+					desc <- tpb*0.05;
+					tpb <- tpb-desc;
+				FinSi
+				tp <- tp+tpb;
+			SiNo
+				Escribir 'error';
+			FinSi
+			Escribir 'desea otro combo?';
+			Leer resp1;
+		FinMientras
+		Escribir 'su total a pagar es $', tp;
+		Escribir 'gracias por su compra';
+		Escribir '';
+		Escribir 'otro cliente?';
+		Leer resp;
+	FinMientras
+FinProceso

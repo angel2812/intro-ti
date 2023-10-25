@@ -1,0 +1,19 @@
+Proceso sin_titulo
+	Definir n1,n2,suma Como Entero;
+	suma<-0;
+	Repetir
+	Escribir 'ingrese el numero inicial la suma: ';
+	Leer n1;
+	Escribir 'ingrese el numero final de la suma';
+	Leer n2;
+	si n1<1 o n2<n1 o n1>=n2 Entonces
+		Escribir 'rangos invalidos';
+	FinSi
+Hasta Que n1>0 y n2>0 y n1<n2;
+Repetir
+	suma<-suma+(n1*n1);
+	n1<-n1+1;
+Hasta Que n1>n2	
+Escribir 'la suma es: ' ,suma;
+
+FinProceso

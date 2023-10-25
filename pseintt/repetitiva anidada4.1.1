@@ -1,0 +1,28 @@
+Proceso sin_titulo
+	Definir correo,contrasenia, correousuario,contraseniausuario como cadena;
+	correo<-'miliju_mmcc@gmail.com';
+	contrasenia<-'g0010111';
+	correousuario<-' ';
+	Repetir
+		Mientras correousuario<>correo Hacer
+			Escribir 'ingrese su correo';
+			Leer correousuario;
+			Borrar Pantalla;
+			si correousuario<>correo Entonces
+				Escribir 'dato erroneo, intente nuevamente';
+			FinSi
+		FinMientras
+		Borrar Pantalla;
+		
+		Escribir ' ';
+		Escribir 'ingrese su contraseña';
+		Leer contraseniausuario;
+		Borrar Pantalla;
+		
+		si contraseniausuario<>contrasenia Entonces
+			Escribir 'contraseña equiocada, intent nuevamente';
+		FinSi
+	Hasta Que contraseniausuario==contrasenia;
+	Borrar Pantalla;
+	Escribir 'logeo satisfactorio! cargando pagina principal...';
+FinProceso

@@ -1,0 +1,20 @@
+Proceso sin_titulo
+	definir n, x1,y1 Como Entero;
+	Escribir ' introduce un numero entero';
+	Leer n;
+	Mientras n<=0 Hacer
+		Escribir 'tu numero es negativo, introduce uno positivo por favor';
+		Leer n;
+	FinMientras
+	Para x1<-1 Hasta n Con Paso 1 Hacer
+		y1<-1;
+		Repetir
+			si y1*n=n Entonces
+				Escribir x1,'*',y1,'=',y1*x1;
+			FinSi
+			si y1<>n Entonces
+				y1<-y1+1;
+			FinSi
+		Hasta Que y1==n
+	FinPara
+FinProceso

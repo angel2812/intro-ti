@@ -1,0 +1,42 @@
+Proceso sin_titulo
+	definir nums,num,negativo,positivos,neutros,may,men,num2,num3 como entero;
+	Definir prom, sumanum, x  como real;
+	Escribir 'cuantos numeros quieres ingresar a la lista?';
+	Leer nums;
+	x<-nums;
+	Repetir
+		Escribir 'teclea un numero';
+		Leer num;
+		si num==0 Entonces
+			Escribir 'numero neutro';
+			neutros<-neutros+1;
+		FinSi
+		si num<0 Entonces
+			Escribir 'numero negativo';
+			negativo<-negativo+1;
+		FinSi
+		si num>0 Entonces
+			Escribir 'numero positivo';
+			positivos<-positivos+1;
+		FinSi
+		si nums==x Entonces
+			num2<-num;
+			num3<-num;
+		FinSi
+		si num>=num2; entonces
+			num2<-num;
+		FinSi
+		si num<= num3 Entonces
+			num3<-num;
+		FinSi
+		sumanums<-sumanums+num;
+		nums<-nums-1;
+	Hasta Que  nums==0
+	prom<- sumanums/x;
+	Escribir 'los numeros neutros son:',neutros;
+	Escribir 'los numeros negativos son:',negativo;
+	Escribir 'los numers positivos son:',positivos;
+	Escribir 'el promedio es:',prom;
+	Escribir 'el numero mayor es:',num2;
+	Escribir 'el numero menor es:',num3;
+FinProceso
